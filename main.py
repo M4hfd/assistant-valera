@@ -12,29 +12,28 @@ print("""Я могу:
 1-написать рандомное число, 
 2-решить простой пример со сложением, 
 3-решить простой пример с вычитанием""")
-do = input("Что сделать? Введи номер: ")
-if do == "1":
-  
-  print("""Я могу:
-1-написать число от 1 до 10
-2-написать число с твоими числами""")
-  do2 = input("Что мне сделать? Введи номер: ")
-  if do2 == "1":
-    random = random.randint(1,10)
-    print(random)
-  if do2 == "2":
-    rn1 = input("Первое число: ")
-    rn2 = input("Второе число: ")
-    random = random.randint(int(rn1),int(rn2))
-    print(random) 
-if do == "2":
-  number1 = input("Введи 1 число: ")
-  number2 = input("Введи 2 число: ")
+choice = input("Что сделать? Введи номер: ")
+if choice == "1":
+      
+    print("Я могу:")
+    print("1-написать число от 1 до 10")
+    print("2-написать число с твоими числами")
+    random_choice = input("Что мне сделать? Введи номер: ")
+    if random_choice == "1":
+        random = random.randint(1,10)
+        print(random)
+    if random_choice == "2":
+        first_random_number = input("Первое число: ")
+        second_random_number = input("Второе число: ")
+        random = random.randint(int(first_random_number),int(second_random_number))
+        print(random) 
+if choice == "2":
+    summation_first_number = input("Введи 1 число: ")
+    summation_second_number = input("Введи 2 число: ")
 
-  print( "Ответ:", int(number1) + int(number2))
-if do == "3":
-  number3 = input("Введи 1 число: ")
-  number4 = input("Введи 2 число: ")
+    print( "Ответ:", int(number1) + int(number2))
+if choice == "3":
+    subtract_first_number = input("Введи 1 число: ")
+    subtract_second_number = input("Введи 2 число: ")
   
-  print( "Ответ:", int(number3) - int(number4))
-  
+    print( "Ответ:", int(number3) - int(number4)) 
